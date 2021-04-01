@@ -13,29 +13,29 @@ async function gettime(){
     j = await response.json();
     daytime = j.datetime;
     hour =  daytime.slice(11,13);
-   if(hour < 8 && hour > 6){
+   if(hour <= 8 && hour >= 6){
        var bg = "sunrise1.png";
    }
-   else if(hour < 10 && hour > 8){
+   else if(hour <= 10 && hour >= 8){
        var bg = "sunrise2.png";
    }
-   else if(hour < 12 && hour > 10){
+   else if(hour <= 12 && hour >= 10){
        var bg = "sunrise4.png";
    }
-   else if(hour < 14 && hour > 12){
+   else if(hour <= 14 && hour >= 12){
        var bg = "sunrise5.png";
    }
-   else if(hour < 16 && hour > 14){
-       var bg = "sunrise7.png";
+   else if(hour <= 16 && hour >= 14){
+       var bg = "sunset7.png";
    }
-   else if(hour < 18 && hour > 16){
-       var bg = "sunrise10.png";
+   else if(hour <= 18 && hour >= 16){
+       var bg = "sunset10.png";
    }
-   else if(hour < 20 && hour > 18){
-       var bg = "sunrise11.png";
+   else if(hour <= 20 && hour >= 18){
+       var bg = "sunset11.png";
    }
    else {
-       var bg = "sunrise12.png";
+       var bg = "sunset12.png";
    }
    backgroundimage = loadImage(bg);
     console.log(hour);
